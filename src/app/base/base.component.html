@@ -1,3 +1,6 @@
-<h2>BaseComponent</h2>
+<section>
+  <h2>BaseComponent</h2>
 
-<router-outlet></router-outlet>
+  <a [routerLink]="['', 'main', targetId, 'detail', targetSubId]">/main/{{targetId}}/detail/{{targetSubId}}</a>  
+  <router-outlet></router-outlet>
+</section>

@@ -14,7 +14,7 @@ const routes: Routes = [
         component: MainComponent,
         children: [
           {
-            path: 'detail/:sub-id',
+            path: 'detail/:subId',
             component: DetailComponent,
           },
         ],
