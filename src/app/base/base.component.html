@@ -1,6 +1,16 @@
 <section>
   <h2>BaseComponent</h2>
 
-  <a [routerLink]="['', 'main', targetId, 'detail', targetSubId]">/main/{{targetId}}/detail/{{targetSubId}}</a>  
+  <button (click)="randomize()">Randomize Ids</button>
+
+  <ul>
+    <li>
+      <a [routerLink]="['', 'main', targetId]">/main/{{targetId}}</a>      
+    </li>
+    <li>
+      <a [routerLink]="['', 'main', targetId, 'detail', targetSubId]">/main/{{targetId}}/detail/{{targetSubId}}</a>
+    </li>
+  </ul>
+
   <router-outlet></router-outlet>
 </section>

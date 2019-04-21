@@ -10,10 +10,18 @@ export class BaseComponent implements OnInit {
   targetSubId: string;
 
   constructor() {
-    this.targetId = String(Math.floor(Math.random() * 100000));
-    this.targetSubId = String(Math.floor(Math.random() * 100000));
+    this.generateIds();
   }
 
   ngOnInit() {
+  }
+
+  randomize() {
+    this.generateIds();
+  }
+
+  private generateIds() {
+    this.targetId = String(Math.floor(Math.random() * 100000));
+    this.targetSubId = String(Math.floor(Math.random() * 100000));
   }
 }
