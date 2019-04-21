@@ -16,8 +16,8 @@ const routes: Routes = [
           {
             path: 'detail/:sub-id',
             component: DetailComponent,
-          }
-        ]
+          },
+        ],
       },
     ],
   },
