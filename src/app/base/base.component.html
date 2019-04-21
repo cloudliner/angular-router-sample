@@ -5,13 +5,10 @@
 
   <ul>
     <li>
-      <a [routerLink]="['']">/</a>     
+      <a [routerLink]="['main', targetId]">main/{{targetId}}</a>      
     </li>
     <li>
-      <a [routerLink]="['', 'main', targetId]">/main/{{targetId}}</a>      
-    </li>
-    <li>
-      <a [routerLink]="['', 'main', targetId, 'detail', targetSubId]">/main/{{targetId}}/detail/{{targetSubId}}</a>
+      <a [routerLink]="['main', targetId, 'detail', targetSubId]">main/{{targetId}}/detail/{{targetSubId}}</a>
     </li>
   </ul>
 

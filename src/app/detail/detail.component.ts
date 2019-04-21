@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -6,7 +6,7 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './detail.component.html',
   styleUrls: ['./detail.component.scss']
 })
-export class DetailComponent implements OnInit {
+export class DetailComponent implements OnInit, OnDestroy {
   id: string;
   subscribedId: string;
   subId: string;
@@ -17,6 +17,8 @@ export class DetailComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    console.log('DetailComponent#ngOnInit');
+
     this.subId = this.route.snapshot.params.subId;
     this.id = this.route.parent.snapshot.params.id;
     this.route.params.subscribe(res => {
@@ -25,5 +27,9 @@ export class DetailComponent implements OnInit {
     this.route.parent.params.subscribe(res => {
       this.subscribedId = res.id;
     });
+  }
+
+  ngOnDestroy(): void {
+    console.log('DetailComponent#ngOnDestroy');
   }
 }
